@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Companies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Website</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Phone</th>
+      <th>Facebook url</th>
+      <th>Linkedin url</th>
+      <th>Google a id</th>
+      <th>Instagram url</th>
+      <th>Twitter url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @companies.each do |company| %>
+      <tr>
+        <td><%= company.name %></td>
+        <td><%= company.website %></td>
+        <td><%= company.address %></td>
+        <td><%= company.city %></td>
+        <td><%= company.state %></td>
+        <td><%= company.zip %></td>
+        <td><%= company.phone %></td>
+        <td><%= company.Facebook_URL %></td>
+        <td><%= company.LinkedIn_URL %></td>
+        <td><%= company.Google_A_ID %></td>
+        <td><%= company.Instagram_URL %></td>
+        <td><%= company.Twitter_URL %></td>
+        <td><%= link_to 'Show', company %></td>
+        <td><%= link_to 'Edit', edit_company_path(company) %></td>
+        <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Company', new_company_path %>
