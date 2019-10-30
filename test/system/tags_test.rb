@@ -15,7 +15,7 @@ class TagsTest < ApplicationSystemTestCase
     click_on "New Tag"
 
     fill_in "Name", with: @tag.name
-    fill_in "Slugs", with: @tag.slugs
+    fill_in "Slug", with: @tag.slug
     fill_in "Type", with: @tag.type
     click_on "Create Tag"
 
@@ -28,7 +28,7 @@ class TagsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Name", with: @tag.name
-    fill_in "Slugs", with: @tag.slugs
+    fill_in "Slug", with: @tag.slug
     fill_in "Type", with: @tag.type
     click_on "Update Tag"
 

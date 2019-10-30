@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  slugs: MyString
+  slug: MyString
   type: 
 
 two:
   name: MyString
-  slugs: MyString
+  slug: MyString
   type: 
