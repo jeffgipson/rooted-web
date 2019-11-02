@@ -20,5 +20,15 @@
   <%= @image_asset.category %>
 </p>
 
+<% if @image_asset.uploads.attached? %>
+<p>
+  <strong>Images:</strong>
+  <br>
+  <% @image_asset.uploads.each do |image| %>
+    <%= image_tag(image) %>
+  <% end %>
+</p>
+<% end %>
+
 <%= link_to 'Edit', edit_image_asset_path(@image_asset) %> |
 <%= link_to 'Back', image_assets_path %>

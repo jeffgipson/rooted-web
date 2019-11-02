@@ -31,6 +31,11 @@
     <%= form.text_field :category %>
   </div>
 
+  <div class="field">
+    <%= form.label :uploads %>
+    <%= form.file_field :uploads, multiple: true %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
