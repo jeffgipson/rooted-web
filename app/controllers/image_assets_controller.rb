@@ -69,6 +69,6 @@ class ImageAssetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_asset_params
-      params.require(:image_asset).permit(:name, :image, :tags_id)
+      params.require(:image_asset).permit(:name, :image, :tags_id, images:[])
     end
 end
