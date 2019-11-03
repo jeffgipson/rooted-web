@@ -14,9 +14,10 @@ class ImageAssetsTest < ApplicationSystemTestCase
     visit image_assets_url
     click_on "New Image Asset"
 
-    fill_in "Image", with: @image_asset.image
+    fill_in "Approval", with: @image_asset.approval
+    fill_in "Category", with: @image_asset.category
+    fill_in "Description", with: @image_asset.description
     fill_in "Name", with: @image_asset.name
-    fill_in "Tags", with: @image_asset.tags_id
     click_on "Create Image asset"
 
     assert_text "Image asset was successfully created"
@@ -27,9 +28,10 @@ class ImageAssetsTest < ApplicationSystemTestCase
     visit image_assets_url
     click_on "Edit", match: :first
 
-    fill_in "Image", with: @image_asset.image
+    fill_in "Approval", with: @image_asset.approval
+    fill_in "Category", with: @image_asset.category
+    fill_in "Description", with: @image_asset.description
     fill_in "Name", with: @image_asset.name
-    fill_in "Tags", with: @image_asset.tags_id
     click_on "Update Image asset"
 
     assert_text "Image asset was successfully updated"

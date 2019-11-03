@@ -17,7 +17,7 @@ class ImageAssetsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create image_asset" do
     assert_difference('ImageAsset.count') do
-      post image_assets_url, params: { image_asset: { image: @image_asset.image, name: @image_asset.name, tags_id: @image_asset.tags_id } }
+      post image_assets_url, params: { image_asset: { approval: @image_asset.approval, category: @image_asset.category, description: @image_asset.description, name: @image_asset.name } }
     end
 
     assert_redirected_to image_asset_url(ImageAsset.last)
@@ -34,7 +34,7 @@ class ImageAssetsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update image_asset" do
-    patch image_asset_url(@image_asset), params: { image_asset: { image: @image_asset.image, name: @image_asset.name, tags_id: @image_asset.tags_id } }
+    patch image_asset_url(@image_asset), params: { image_asset: { approval: @image_asset.approval, category: @image_asset.category, description: @image_asset.description, name: @image_asset.name } }
     assert_redirected_to image_asset_url(@image_asset)
   end
 

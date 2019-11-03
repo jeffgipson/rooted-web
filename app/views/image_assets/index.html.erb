@@ -6,8 +6,9 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Image</th>
-      <th>Tags</th>
+      <th>Description</th>
+      <th>Approval</th>
+      <th>Category</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,8 +17,10 @@
     <% @image_assets.each do |image_asset| %>
       <tr>
         <td><%= image_asset.name %></td>
-        <td><%= image_asset.image %></td>
-        <td><%= image_asset.tags_id %></td>
+        <td><%= image_asset.description %></td>
+        <td><%= image_asset.approval %></td>
+        <td><%= image_asset.category %></td>
+        <td><%= image_asset.uploads %></td>
         <td><%= link_to 'Show', image_asset %></td>
         <td><%= link_to 'Edit', edit_image_asset_path(image_asset) %></td>
         <td><%= link_to 'Destroy', image_asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>

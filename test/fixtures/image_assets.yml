@@ -2,10 +2,12 @@
 
 one:
   name: MyString
-  image: MyString
-  tags: one
+  description: MyText
+  approval: MyString
+  category: MyString
 
 two:
   name: MyString
-  image: MyString
-  tags: two
+  description: MyText
+  approval: MyString
+  category: MyString

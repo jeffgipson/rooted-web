@@ -6,14 +6,29 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= @image_asset.image %>
+  <strong>Description:</strong>
+  <%= @image_asset.description %>
 </p>
 
 <p>
-  <strong>Tags:</strong>
-  <%= @image_asset.tags_id %>
+  <strong>Approval:</strong>
+  <%= @image_asset.approval %>
 </p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @image_asset.category %>
+</p>
+
+<% if @image_asset.uploads.attached? %>
+<p>
+  <strong>Images:</strong>
+  <br>
+  <% @image_asset.uploads.each do |image| %>
+    <%= image_tag(image) %>
+  <% end %>
+</p>
+<% end %>
 
 <%= link_to 'Edit', edit_image_asset_path(@image_asset) %> |
 <%= link_to 'Back', image_assets_path %>

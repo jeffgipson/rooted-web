@@ -3,9 +3,9 @@
 one:
   name: MyString
   slug: MyString
-  type: 
+  category: MyString
 
 two:
   name: MyString
   slug: MyString
-  type: 
+  category: MyString
